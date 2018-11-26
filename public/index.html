@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <title>ContactList</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="app-name">Contacts</h1>
+        <div class="btn-group">
+            <div class="selectBox">
+                <input type="checkbox" name="" value="">
+                <select class="addValue minimal">
+                    <option></option>
+                    <option>All</option>
+                    <option>None</option>
+                    <option>Starred</option>
+                    <option>Unstarred</option>
+                </select>
+            </div>
+            <div class="addBox">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                <select class="userSelect">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <section>
+        <div class="raw">
+            <div class="filter-menu">
+                <div class="col-md-2">
+                    <input id="newContact" name="New Contact" type="button" value="NEW CONTACT" onclick="contact.new()">
+                    <ul>
+                        <li><a href="#" target="_top" title="MyContacts">My Contacts</a></li>
+                        <li><a href="#" target="_top" title="mostContacted">Most Contacted</a></li>
+                        <li><a href="#" target="_top" title="otherContacts">Other Contacts</a></li>
+                        <li><a href="#" target="_top" title="categories" data-toggle="collapse" data-target="#categories-list">Categories</a>
+                            <div class="collapse" id="categories-list">
+                                <ul>
+                                    <li><a href="#" target="_top" onclick="contact.list('Family')">Family<i class="right"></i></a></li>
+                                    <li><a href="#" target="_top" onclick="contact.list('Friends')">Friends<i class="right"></i></a></li>
+                                    <li><a href="#" target="_top" onclick="contact.list('Colleagues')">Colleagues<i
+                                                class="right"></i></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" target="_top" title="Directory">Directory</a></li>
+                        <li><a href="#" target="_top" title="group">New Group...</a></li>
+                        <li><a href="#" target="_top" title="importContacts">Import Contacts...</a></li>
+                    </ul>
+                </div>
+                <div id="contactList" class="col-md-10"></div>
+                <div class="col-md-10">
+                    <form id="contactForm" onsubmit="return false" hidden>
+                        <div>
+                            <label for="name">Name :</label>
+                            <input name="name" id="name" type="text" class="tag-style" required>
+                        </div>
+                        <div>
+                            <label for="email">Email :</label>
+                            <input name="email" id="email" type="email" class="tag-style" required>
+                        </div>
+                        <div>
+                            <label for="number">Phone :</label>
+                            <input name="number" id="number" type="tel" class="tag-style" pattern="[6789][0-9]{9}" required>
+                        </div>
+                        <div>
+                            <label for="address">Address:</label>
+                            <input name="address" id="address" type="text" class="tag-style">
+                        </div>
+                        <div>
+                            <label>Categories:</label>
+                            <select class="tag-style" name="categories" id="categories">Categories
+                                <option class="family">Family</option>
+                                <option class="friends">Friends</option>
+                                <option class="colleagues">Colleagues</option>
+                            </select>
+                        </div>
+                        <input id="submit" name="submit" type="submit" value="Submit" onclick="contact.save()">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="notification" id="notification" hidden>
+            <span></span>
+        </div>
+        <div id="showCat"></div>
+    </section>
+</body>

@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+header{
+   color: black;
+}
+.app-name{
+    width: 16%;
+    float: left;
+    color: red;
+}
+.tag-style{
+    border-radius: 10px;
+    margin:10px 10px;
+    font-size: 13px;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid black;
+}
+#submit {
+    background-color: aqua;
+    padding: 12px;
+    width: auto;
+    margin: 12px 0px;
+}
+button {
+    padding: 5px;
+    background-color: aqua;
+    margin-left: 5px !important;
+}
+.notification{
+   color: aqua;
+   position: fixed;
+   transform: translate(-380px,6px);
+   bottom: 30px;
+   right: 50px;
+   font-size: 20px;
+   padding: 5px;
+   opacity: 0.7;
+}
+#newContact{
+    background-color:red;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.grid-container{
+    display: grid;
+}
+#contactForm div{
+    display: table;
+    width:100%;
+}
+#contactForm{
+    max-width: 50%;
+}
+#contactForm div * {
+    display: table-cell;
+}
+#contactForm div label{
+    width: 20%;
+}
+.filter-menu ul {
+    list-style: none;
+    padding: 0px;
+}
+.filter-menu ul li {
+    padding:3px;
+}
+
+.filter-menu div a{
+    text-decoration: none;
+    color: black;
+}
+.btn-group{
+    display: flex !important;
+    text-align: center;
+}
+.selectBox{
+    border: 1px solid grey;
+    margin: 28px 0px 26px 26px;
+    padding: 6px;
+    background-color: #f5f5f5;
+}
+.addBox{
+    border: 1px solid grey;
+    margin: 26px 15px;
+    padding: 6px;
+    background-color: #f5f5f5;
+}
+table{
+    width: 100%;
+}
+.addValue{
+    border: 0px;
+    width: 20%;
+}
+.userSelect{
+    border: 0px;
+}
+.filter-menu i{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+  }
